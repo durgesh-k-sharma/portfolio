@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Meta Tags -->
+  <title>Durgesh Sharma — Software & Systems Engineer | Portfolio</title>
+  <meta name="description" content="Personal portfolio of Durgesh Sharma, Software & Systems Engineer. Building high-performance web applications, scalable backend systems, compilers, and developer tools.">
+  <meta name="author" content="Durgesh Sharma">
+  <meta name="keywords" content="Durgesh Sharma, durgesh-k-sharma, Systems Engineer, Software Engineer, Fullstack Developer, Web Development, Portfolio">
+  
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://durgesh-k-sharma.github.io/portfolio/">
+  <meta property="og:title" content="Durgesh Sharma — Software & Systems Engineer">
+  <meta property="og:description" content="Building high-performance web applications, systems, and modern digital experiences. Explore projects, tech stack, and background.">
+  <meta property="og:image" content="https://durgesh-k-sharma.github.io/portfolio/og-preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Durgesh Sharma — Software & Systems Engineer">
+  <meta name="twitter:description" content="Building high-performance web applications, systems, and modern digital experiences. Explore projects, tech stack, and background.">
+  <meta name="twitter:image" content="https://durgesh-k-sharma.github.io/portfolio/og-preview.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <!-- Custom Cursor Glow -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true"></div>
+  <div id="cursor-follower" class="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Background Ambient Glow & Grid Canvas -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+  <canvas id="cyber-canvas" class="cyber-canvas" aria-hidden="true"></canvas>
+
+  <!-- Sticky Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Home">
+        <span class="logo-accent">&lt;</span>Durgesh Sharma<span class="logo-accent"> /&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="nav-menu" aria-label="Main Navigation">
+        <a href="#about" class="nav-link"><span class="nav-num">01.</span> About</a>
+        <a href="#projects" class="nav-link"><span class="nav-num">02.</span> Projects</a>
+        <a href="#skills" class="nav-link"><span class="nav-num">03.</span> Skills</a>
+        <a href="#experience" class="nav-link"><span class="nav-num">04.</span> Experience</a>
+        <a href="#contact" class="nav-link"><span class="nav-num">05.</span> Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle light/dark theme" title="Toggle Theme (T)">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+
+        <a href="https://github.com/durgesh-k-sharma" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+          <i data-lucide="file-text"></i> GitHub Profile
+        </a>
+
+        <button id="mobile-toggle" class="mobile-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i data-lucide="menu" class="open-icon"></i>
+          <i data-lucide="x" class="close-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <div class="status-badge glow-emerald">
+          <span class="pulse-dot"></span>
+          <span>Available for new projects & engineering roles</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Durgesh Sharma</span>.
+          <br>
+          <span class="hero-subtitle">Software & Systems Engineer</span>
+        </h1>
+
+        <p class="hero-description">
+          I craft high-performance web applications, compilers, systems software, and developer tools with a focus on speed, reliability, and clean modern architecture.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Work</span>
+            <i data-lucide="arrow-down-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Get in Touch</span>
+            <i data-lucide="mail"></i>
+          </a>
+          <button id="terminal-trigger-btn" class="btn btn-ghost" title="Open Interactive CLI Terminal">
+            <i data-lucide="terminal"></i>
+            <span>Interactive CLI</span>
+          </button>
+        </div>
+
+        <!-- Social Quick Links Bar -->
+        <div class="hero-socials">
+          <a href="https://github.com/durgesh-k-sharma" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="GitHub Profile">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="https://linkedin.com/in/durgesh-k-sharma" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn Profile">
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a href="https://twitter.com/durgesh_k_sharma" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Twitter/X Profile">
+            <i data-lucide="twitter"></i>
+          </a>
+          <a href="mailto:durgeshsharma51000@gmail.com" class="social-icon-link" aria-label="Send Email">
+            <i data-lucide="mail"></i>
+          </a>
+          <span class="hero-location-tag">
+            <i data-lucide="map-pin"></i> India / Remote
+          </span>
+        </div>
+      </div>
+
+      <!-- Interactive Cyber Terminal Widget -->
+      <div class="hero-terminal-container">
+        <div class="terminal-header">
+          <div class="terminal-window-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <span class="terminal-title">durgesh-shell — zsh — 80x24</span>
+          <button class="terminal-reset-btn" id="terminal-clear-btn" title="Clear Terminal">
+            <i data-lucide="rotate-ccw"></i>
+          </button>
+        </div>
+        <div class="terminal-body" id="terminal-output">
+          <div class="terminal-line text-muted">
+            Welcome to Durgesh Sharma's Interactive Portfolio Shell (v2.6)
+          </div>
+          <div class="terminal-line text-cyan">
+            Type <span class="text-emerald">'help'</span> to see available commands or click quick actions below.
+          </div>
+          <div class="terminal-line">
+            <span class="term-prompt">$</span> <span class="term-cmd">whoami</span>
+          </div>
+          <div class="terminal-line text-muted">
+            &gt; Durgesh Sharma | Software & Systems Engineer | India / Remote
+          </div>
+          <div class="terminal-line">
+            <span class="term-prompt">$</span> <span class="term-cmd">cat skills.json</span>
+          </div>
+          <div class="terminal-line text-muted">
+            &gt; ["C/C++", "Rust", "TypeScript", "Go", "React", "Node.js", "Python", "Docker"]
+          </div>
+        </div>
+        <div class="terminal-input-row">
+          <span class="term-prompt">$</span>
+          <input type="text" id="terminal-input" placeholder="type 'help', 'skills', 'projects', 'contact'..." autocomplete="off" spellcheck="false" aria-label="Terminal input prompt">
+        </div>
+        <div class="terminal-quick-pills">
+          <button class="term-pill" data-cmd="help">help</button>
+          <button class="term-pill" data-cmd="projects">projects</button>
+          <button class="term-pill" data-cmd="skills">skills</button>
+          <button class="term-pill" data-cmd="contact">contact</button>
+          <button class="term-pill" data-cmd="matrix">matrix</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY METRICS STRIP -->
+    <section class="metrics-section" aria-label="Key Achievements">
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value"><span class="counter" data-target="50">50</span>+</div>
+          <div class="metric-label">Repositories & Projects</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value"><span class="counter" data-target="5">5</span>+</div>
+          <div class="metric-label">Core Languages (C++, Rust, JS, Go, Python)</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value"><span class="counter" data-target="99">99.9</span>%</div>
+          <div class="metric-label">Code Reliability & Test Coverage</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value"><span class="counter" data-target="100">100</span>%</div>
+          <div class="metric-label">Open Source & Systems Driven</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">&lt;01&gt; / BACKGROUND</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text-content">
+          <p class="paragraph-lead">
+            I am a software engineer with a strong passion for systems engineering, compilers, high-performance web applications, and developer tools.
+          </p>
+          <p>
+            My work spans low-level systems (such as self-hosting C compilers, tree-walk interpreters, and RISC-V simulators) to modern full-stack web applications built with TypeScript, React, Vite, and Node.js.
+          </p>
+          <p>
+            I focus heavily on writing clean, efficient code, optimizing execution performance, and crafting developer-centric CLI and web interfaces.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i data-lucide="check-circle" class="highlight-icon"></i>
+              <div>
+                <h4>Systems & Compiler Engineering</h4>
+                <p>Building language runtimes, parsers, interpreters, and hardware simulators.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check-circle" class="highlight-icon"></i>
+              <div>
+                <h4>Fullstack & Web Architecture</h4>
+                <p>Designing responsive modern frontend web apps with robust Node.js / Go backend services.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i data-lucide="check-circle" class="highlight-icon"></i>
+              <div>
+                <h4>Developer Experience & Tooling</h4>
+                <p>Creating fast CLI applications, automated build scripts, and workflow utilities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual-card">
+          <div class="profile-frame">
+            <div class="profile-image-placeholder">
+              <div class="avatar-cyber-ring">
+                <i data-lucide="terminal" class="avatar-icon"></i>
+              </div>
+              <span class="avatar-caption">Durgesh Sharma</span>
+            </div>
+          </div>
+
+          <div class="tech-radar-box">
+            <div class="radar-header">
+              <i data-lucide="cpu"></i>
+              <span>Core Stack Overview</span>
+            </div>
+            <ul class="radar-list">
+              <li><span class="tech-dot cyan"></span> Frontend: React, TypeScript, HTML5, CSS3, Vite</li>
+              <li><span class="tech-dot emerald"></span> Systems: C/C++, Rust, Go, Python</li>
+              <li><span class="tech-dot purple"></span> Backend & DB: Node.js, Express, PostgreSQL, Redis</li>
+              <li><span class="tech-dot yellow"></span> Tools: Git, Docker, Linux, Bash, GitHub Actions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">&lt;02&gt; / FEATURED WORK</span>
+        <h2 class="section-title">Selected <span class="gradient-text">Projects</span></h2>
+        <p class="section-desc">A showcase of systems software, developer CLI tools, and modern web applications built by Durgesh Sharma.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="project-filters" id="project-filters">
+        <button class="filter-tab active" data-filter="all">All Work (<span id="count-all">4</span>)</button>
+        <button class="filter-tab" data-filter="systems">Systems & Compilers</button>
+        <button class="filter-tab" data-filter="tools">CLI Tools</button>
+        <button class="filter-tab" data-filter="web">Web Apps</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- PROJECT 1 -->
+        <article class="project-card" data-category="systems tools" data-id="project-1">
+          <div class="project-preview-window">
+            <div class="window-bar">
+              <span class="win-dot red"></span>
+              <span class="win-dot yellow"></span>
+              <span class="win-dot green"></span>
+              <span class="win-url">github.com/durgesh-k-sharma/rcc</span>
+            </div>
+            <div class="project-preview-graphic graphic-ide">
+              <div class="graphic-content">
+                <div class="mock-code-editor">
+                  <div class="code-line"><span class="code-comment">// Self-Hosting C11 Compiler</span></div>
+                  <div class="code-line"><span class="code-kw">int</span> <span class="code-fn">main</span>(<span class="code-kw">int</span> argc, <span class="code-kw">char</span> **argv) {</div>
+                  <div class="code-line indent">ASTNode *node = <span class="code-fn">parse_expression</span>();</div>
+                  <div class="code-line indent"><span class="code-fn">codegen_x86_64</span>(node);</div>
+                  <div class="code-line"><span class="code-kw">return</span> <span class="code-num">0</span>; }</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-badge emerald">Systems</span>
+              <span class="project-type">C11 Compiler Engine</span>
+            </div>
+            <h3 class="project-title">RCC — Self-Hosting C Compiler</h3>
+            <p class="project-desc">
+              A lightweight, self-hosting C11 compiler capable of lexing, parsing, and generating target x86_64 assembly code.
+            </p>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">C11</span>
+              <span class="tech-tag">x86_64 Assembly</span>
+              <span class="tech-tag">Compilers</span>
+              <span class="tech-tag">Make</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com/durgesh-k-sharma/rcc" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i data-lucide="github"></i> Code Repository
+              </a>
+              <button class="btn btn-sm btn-ghost view-details-btn" data-project="1">
+                <i data-lucide="info"></i> Details
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 2 -->
+        <article class="project-card" data-category="tools systems" data-id="project-2">
+          <div class="project-preview-window">
+            <div class="window-bar">
+              <span class="win-dot red"></span>
+              <span class="win-dot yellow"></span>
+              <span class="win-dot green"></span>
+              <span class="win-url">github.com/durgesh-k-sharma/todophi</span>
+            </div>
+            <div class="project-preview-graphic graphic-analytics">
+              <div class="graphic-content">
+                <div class="mock-code-editor">
+                  <div class="code-line text-cyan">$ todophi add "Build Rust RISC-V simulator"</div>
+                  <div class="code-line text-emerald">✔ Task #12 created successfully!</div>
+                  <div class="code-line text-muted">&gt; Status: In Progress | Priority: High</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-badge cyan">CLI Tool</span>
+              <span class="project-type">Terminal Productivity</span>
+            </div>
+            <h3 class="project-title">Todophi — Terminal Task Manager</h3>
+            <p class="project-desc">
+              Fast, keyboard-driven CLI task management application built for developers working directly in Linux/macOS terminal environments.
+            </p>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">Rust</span>
+              <span class="tech-tag">CLI</span>
+              <span class="tech-tag">Terminal UI</span>
+              <span class="tech-tag">SQLite</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com/durgesh-k-sharma/todophi" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i data-lucide="github"></i> Code Repository
+              </a>
+              <button class="btn btn-sm btn-ghost view-details-btn" data-project="2">
+                <i data-lucide="info"></i> Details
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 3 -->
+        <article class="project-card" data-category="systems" data-id="project-3">
+          <div class="project-preview-window">
+            <div class="window-bar">
+              <span class="win-dot red"></span>
+              <span class="win-dot yellow"></span>
+              <span class="win-dot green"></span>
+              <span class="win-url">github.com/durgesh-k-sharma/rv32i</span>
+            </div>
+            <div class="project-preview-graphic graphic-fintech">
+              <div class="graphic-content">
+                <div class="mock-card-visual">
+                  <div class="card-num">RV32I RISC-V Emulator</div>
+                  <div class="card-balance">Fetch ➔ Decode ➔ Execute</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-badge purple">Emulator</span>
+              <span class="project-type">Hardware Simulation</span>
+            </div>
+            <h3 class="project-title">RV32I — Two-Pass RISC-V Simulator</h3>
+            <p class="project-desc">
+              A two-pass RV32I instruction set architecture simulator built to execute compiled RISC-V binaries and inspect register files.
+            </p>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">RISC-V</span>
+              <span class="tech-tag">Computer Architecture</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com/durgesh-k-sharma/rv32i" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i data-lucide="github"></i> Code Repository
+              </a>
+              <button class="btn btn-sm btn-ghost view-details-btn" data-project="3">
+                <i data-lucide="info"></i> Details
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 4 -->
+        <article class="project-card" data-category="web" data-id="project-4">
+          <div class="project-preview-window">
+            <div class="window-bar">
+              <span class="win-dot red"></span>
+              <span class="win-dot yellow"></span>
+              <span class="win-dot green"></span>
+              <span class="win-url">durgesh-k-sharma.github.io/portfolio</span>
+            </div>
+            <div class="project-preview-graphic graphic-design">
+              <div class="graphic-content">
+                <div class="mock-ui-tokens">
+                  <div class="token-swatch s-cyan"></div>
+                  <div class="token-swatch s-emerald"></div>
+                  <div class="token-swatch s-purple"></div>
+                  <div class="token-btn-mock">Dark Cyber Portfolio</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-badge cyan">Web App</span>
+              <span class="project-type">Developer Portfolio</span>
+            </div>
+            <h3 class="project-title">Cyber Minimalist Portfolio</h3>
+            <p class="project-desc">
+              A high-performance, dark-mode developer portfolio featuring an interactive CLI terminal, cyber particle canvas, and glassmorphism.
+            </p>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">Vanilla JS</span>
+              <span class="tech-tag">Vite</span>
+              <span class="tech-tag">GitHub Pages</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com/durgesh-k-sharma/portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i data-lucide="github"></i> Code Repository
+              </a>
+              <a href="https://durgesh-k-sharma.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                <i data-lucide="external-link"></i> Live Site
+              </a>
+              <button class="btn btn-sm btn-ghost view-details-btn" data-project="4">
+                <i data-lucide="info"></i> Details
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">&lt;03&gt; / TECH STACK & TOOLS</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Capabilities</span></h2>
+        <p class="section-desc">Technical proficiencies, programming languages, and engineering tools.</p>
+      </div>
+
+      <!-- Skills Grid by Categories -->
+      <div class="skills-categories-grid">
+
+        <!-- Category 1: Systems & Core -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <i data-lucide="cpu" class="category-icon text-cyan"></i>
+            <h3>Systems & Core Languages</h3>
+          </div>
+          <div class="skills-pill-group">
+            <div class="skill-pill"><i data-lucide="code"></i> C / C++11</div>
+            <div class="skill-pill"><i data-lucide="box"></i> Rust</div>
+            <div class="skill-pill"><i data-lucide="terminal"></i> Go (Golang)</div>
+            <div class="skill-pill"><i data-lucide="file-code"></i> Python</div>
+            <div class="skill-pill"><i data-lucide="layers"></i> x86_64 / RISC-V Assembly</div>
+            <div class="skill-pill"><i data-lucide="cpu"></i> Compilers & Interpreters</div>
+          </div>
+        </div>
+
+        <!-- Category 2: Web & Frontend -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <i data-lucide="layout" class="category-icon text-emerald"></i>
+            <h3>Web & Frontend Engineering</h3>
+          </div>
+          <div class="skills-pill-group">
+            <div class="skill-pill"><i data-lucide="code"></i> TypeScript / JavaScript</div>
+            <div class="skill-pill"><i data-lucide="atom"></i> React / Next.js</div>
+            <div class="skill-pill"><i data-lucide="layers"></i> HTML5 / Modern CSS3</div>
+            <div class="skill-pill"><i data-lucide="palette"></i> TailwindCSS</div>
+            <div class="skill-pill"><i data-lucide="zap"></i> Vite</div>
+            <div class="skill-pill"><i data-lucide="globe"></i> RESTful & GraphQL APIs</div>
+          </div>
+        </div>
+
+        <!-- Category 3: Backend & Data -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <i data-lucide="server" class="category-icon text-purple"></i>
+            <h3>Backend & Databases</h3>
+          </div>
+          <div class="skills-pill-group">
+            <div class="skill-pill"><i data-lucide="terminal"></i> Node.js / Express</div>
+            <div class="skill-pill"><i data-lucide="database"></i> PostgreSQL / SQLite</div>
+            <div class="skill-pill"><i data-lucide="box"></i> Redis / Caching</div>
+            <div class="skill-pill"><i data-lucide="shield-check"></i> JWT & OAuth</div>
+            <div class="skill-pill"><i data-lucide="zap"></i> WebSockets & Concurrency</div>
+          </div>
+        </div>
+
+        <!-- Category 4: DevOps & Tools -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <i data-lucide="wrench" class="category-icon text-yellow"></i>
+            <h3>DevOps & Workflow Tools</h3>
+          </div>
+          <div class="skills-pill-group">
+            <div class="skill-pill"><i data-lucide="git-branch"></i> Git / GitHub Actions</div>
+            <div class="skill-pill"><i data-lucide="container"></i> Docker</div>
+            <div class="skill-pill"><i data-lucide="terminal"></i> Linux / Shell Scripting</div>
+            <div class="skill-pill"><i data-lucide="check-square"></i> Jest / GTest / TDD</div>
+            <div class="skill-pill"><i data-lucide="gauge"></i> Performance Profiling</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">&lt;04&gt; / CAREER ROADMAP</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+        <p class="section-desc">Professional engineering contributions and project milestones.</p>
+      </div>
+
+      <div class="timeline">
+
+        <!-- TIMELINE ITEM 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Systems & Software Engineer</h3>
+                <span class="timeline-company">Open Source & Independent Engineering</span>
+              </div>
+              <span class="timeline-date"><i data-lucide="calendar"></i> 2023 — Present</span>
+            </div>
+            <p class="timeline-body">
+              Architecting low-level systems software, language compilers, and high-performance developer tools.
+            </p>
+            <ul class="timeline-bullets">
+              <li>Designed and built RCC, a self-hosting C11 compiler targeting x86_64 assembly.</li>
+              <li>Developed Todophi, a fast Rust-based CLI task manager for developer terminal productivity.</li>
+              <li>Engineered an RV32I RISC-V instruction set architecture emulator in C++.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>C++</span><span>Rust</span><span>C11</span><span>TypeScript</span><span>Go</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIMELINE ITEM 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Fullstack Developer</h3>
+                <span class="timeline-company">Web & Cloud Projects</span>
+              </div>
+              <span class="timeline-date"><i data-lucide="calendar"></i> 2022 — 2023</span>
+            </div>
+            <p class="timeline-body">
+              Built responsive web applications, API microservices, and modern UI components.
+            </p>
+            <ul class="timeline-bullets">
+              <li>Created dark-mode cyber aesthetic web user interfaces with Vite and Vanilla JS.</li>
+              <li>Implemented automated CI/CD deployment pipelines using GitHub Actions.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>TypeScript</span><span>React</span><span>Node.js</span><span>Docker</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">&lt;05&gt; / GET IN TOUCH</span>
+        <h2 class="section-title">Let's Build <span class="gradient-text">Together</span></h2>
+        <p class="section-desc">Whether you have a project idea, engineering role, or just want to connect — feel free to drop a message.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Direct Contact Cards -->
+        <div class="contact-info-column">
+          <div class="contact-card glow-card">
+            <div class="contact-card-icon text-cyan">
+              <i data-lucide="mail"></i>
+            </div>
+            <div class="contact-card-content">
+              <h4>Direct Email</h4>
+              <p>durgeshsharma51000@gmail.com</p>
+              <div class="btn-group-sm">
+                <a href="mailto:durgeshsharma51000@gmail.com" class="btn btn-sm btn-primary">
+                  <i data-lucide="send"></i> Send Email
+                </a>
+                <button class="btn btn-sm btn-outline" id="copy-email-btn" data-email="durgeshsharma51000@gmail.com">
+                  <i data-lucide="copy"></i> Copy Email
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-card glow-card">
+            <div class="contact-card-icon text-emerald">
+              <i data-lucide="message-square"></i>
+            </div>
+            <div class="contact-card-content">
+              <h4>Social Channels</h4>
+              <p>Connect with Durgesh on developer networks</p>
+              <div class="social-pills">
+                <a href="https://github.com/durgesh-k-sharma" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <i data-lucide="github"></i> GitHub
+                </a>
+                <a href="https://linkedin.com/in/durgesh-k-sharma" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <i data-lucide="linkedin"></i> LinkedIn
+                </a>
+                <a href="https://twitter.com/durgesh_k_sharma" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <i data-lucide="twitter"></i> Twitter/X
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Static Form -->
+        <div class="contact-form-card">
+          <form id="contact-form" action="https://formspree.io/f/durgesh" method="POST" class="static-form">
+            <h3 class="form-title"><i data-lucide="send"></i> Send a Quick Message</h3>
+            
+            <div class="form-group">
+              <label for="form-name">Your Name</label>
+              <input type="text" id="form-name" name="name" placeholder="Jane Doe" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="form-email">Your Email</label>
+              <input type="email" id="form-email" name="email" placeholder="jane@example.com" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="message" rows="5" placeholder="Hi Durgesh! I'd love to discuss a potential project or role..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              <span>Send Message</span>
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PROJECT DETAIL MODAL DRAWER -->
+  <div id="project-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal-header">
+        <span class="project-badge" id="modal-badge">Featured</span>
+        <h2 id="modal-project-title" class="gradient-text">Project Title</h2>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-preview-graphic" id="modal-graphic"></div>
+        
+        <div class="modal-section">
+          <h4>Overview & Architecture</h4>
+          <p id="modal-overview">Detailed project overview will appear here.</p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Key Features</h4>
+          <ul id="modal-features-list" class="modal-bullet-list">
+            <li>Feature highlight 1</li>
+            <li>Feature highlight 2</li>
+          </ul>
+        </div>
+
+        <div class="modal-section">
+          <h4>Technologies Used</h4>
+          <div id="modal-tech-tags" class="project-tech-stack"></div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a id="modal-repo-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <i data-lucide="github"></i> View Repository
+        </a>
+        <a id="modal-live-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <i data-lucide="external-link"></i> Open Live Site
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>© <span id="current-year">2026</span> Durgesh Sharma. Built with HTML, CSS, JS & Vite.</p>
+        <p class="footer-subtext">Deployed on GitHub Pages.</p>
+      </div>
+
+      <div class="footer-center">
+        <span class="status-indicator">
+          <span class="status-dot"></span> All Systems Operational
+        </span>
+      </div>
+
+      <div class="footer-right">
+        <button id="back-to-top" class="btn btn-ghost btn-sm" aria-label="Back to top of page">
+          <span>Back to top</span>
+          <i data-lucide="arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lucide Icons Script -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
